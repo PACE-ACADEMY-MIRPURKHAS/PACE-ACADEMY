@@ -3,96 +3,111 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Fancy Header</title>
+  <title>PACE Academy Mirpurkhas</title>
   <style>
-    /* Header Container */
-    header {
-      background: #2c3e50;               /* Dark blue-gray background */
-      color: white;                       /* White text */
-      padding: 15px 30px;                 /* Vertical + horizontal padding */
-      display: flex;                      /* Flex layout */
-      align-items: center;                /* Vertical center */
-      justify-content: space-between;     /* Logo left, nav right */
-      box-shadow: 0 4px 6px rgba(0,0,0,0.1); /* Subtle shadow */
-      position: sticky;                   /* Sticky on scroll */
-      top: 0;
-      z-index: 1000;
-    }
-
-    /* Logo */
-    header .logo {
-      font-size: 1.8rem;
-      font-weight: bold;
-      letter-spacing: 1px;
-      color: #ecf0f1;                     /* Light gray text */
-      text-decoration: none;
-    }
-
-    /* Navigation */
-    header nav {
-      display: flex;
-      align-items: center;
-      gap: 25px;                          /* Space between nav links */
-    }
-
-    /* Navigation Links */
-    header nav a {
-      color: white;
-      text-decoration: none;
-      font-weight: 500;
-      transition: color 0.3s, transform 0.3s;
-    }
-
-    /* Hover Effect */
-    header nav a:hover {
-      color: #1abc9c;                     /* Highlight color on hover */
-      transform: scale(1.1);              /* Slightly enlarge link */
-    }
-
-    /* Responsive for smaller screens */
-    @media (max-width: 768px) {
-      header {
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 10px;
-      }
-      
-      header nav {
-        flex-direction: column;
-        gap: 10px;
-        width: 100%;
-      }
-    }
-
-    /* Body styling for demo */
     body {
-      margin: 0;
       font-family: Arial, sans-serif;
+      margin: 0;
+      background: #f4f6f9;
     }
-
-    main {
-      padding: 50px;
-      background: #ecf0f1;
-      min-height: 100vh;
+    header {
+      background: #2c3e50;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+    nav {
+      background: #34495e;
+      padding: 10px;
+      text-align: center;
+    }
+    nav a {
+      color: white;
+      margin: 0 15px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    .container {
+      padding: 30px;
+    }
+    .card {
+      background: white;
+      padding: 20px;
+      margin: 15px 0;
+      border-radius: 10px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    }
+    input, button {
+      padding: 10px;
+      margin: 8px 0;
+      width: 100%;
+      border-radius: 6px;
+      border: 1px solid #ccc;
+    }
+    button {
+      background: #2c3e50;
+      color: white;
+      cursor: pointer;
+    }
+    footer {
+      text-align: center;
+      background: #2c3e50;
+      color: white;
+      padding: 15px;
+      margin-top: 40px;
     }
   </style>
 </head>
 <body>
 
 <header>
-  <a href="#" class="logo">MyLogo</a>
-  <nav>
-    <a href="#">Home</a>
-    <a href="#">About</a>
-    <a href="#">Services</a>
-    <a href="#">Contact</a>
-  </nav>
+  <img src="Logo.png" alt="Academy Logo" style="width:120px; display:block; margin:0 auto 10px;">
+  <h1>PACE Academy Portal</h1>
+  <p>Learning Management Interface for Students</p>
 </header>
 
-<main>
-  <h1>Welcome to My Website</h1>
-  <p>This is a demo page to showcase the fancy header.</p>
-</main>
+<nav>
+  <a href="#home">Home</a>
+  <a href="#courses">Courses</a>
+  <a href="#login">Student Login</a>
+  <a href="#contact">Contact</a>
+</nav>
+
+<div class="container">
+
+  <div id="home" class="card">
+    <h2>Welcome Students</h2>
+    <p>This is your PACE Academy learning portal. Here you can access courses, notes, and updates.</p>
+  </div>
+
+  <div id="courses" class="card">
+    <h2>Available Courses</h2>
+    <ul>
+      <li>IX & X</li>
+      <li>XI & XII</li>
+      <li>English Language</li>
+      <li>Computer Courses</li>
+    </ul>
+  </div>
+
+  <div id="login" class="card">
+    <h2>Student Login</h2>
+    <input type="text" placeholder="Student ID">
+    <input type="password" placeholder="Password">
+    <button onclick="alert('Login feature can be connected later with database')">Login</button>
+  </div>
+
+  <div id="contact" class="card">
+    <h2>Contact PACE Academy Mirpurkhas</h2>
+    <p>Email: paceacademycontact@gmail.com</p>
+    <p>Phone: 0348-0333205</p>
+  </div>
+
+</div>
+
+<footer>
+  © 2026 PACE Academy Mirpurkhas — Student Portal
+</footer>
 
 </body>
 </html>
